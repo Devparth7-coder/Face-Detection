@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Step 1: Name Input -->
+        <div id="step1" class="step">
+            <h1>Welcome to My Portfolio</h1>
+            <p>Please enter your name:</p>
+            <input type="text" id="nameInput" placeholder="Your Name">
+            <button id="nameSubmit">Next</button>
+        </div>
+
+        <!-- Step 2: Age and Face Capture -->
+        <div id="step2" class="step hidden">
+            <h1>Hi <span id="userName"></span>!</h1>
+            <p>Please allow access to your camera and smile!</p>
+            <p>Enter your age:</p>
+            <input type="number" id="ageInput" placeholder="Your Age" min="1">
+            <div class="camera">
+                <video id="video" autoplay></video>
+                <canvas id="canvas" class="hidden"></canvas>
+                <button id="capture">Capture Photo</button>
+            </div>
+            <button id="submitData">Submit</button>
+        </div>
+
+        <!-- Step 3: Thank You -->
+        <div id="step3" class="step hidden">
+            <h1>Thank you, <span id="finalName"></span>!</h1>
+            <p>Your details have been successfully submitted.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
